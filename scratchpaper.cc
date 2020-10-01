@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <unistd.h>
+#include <unistd.h> //for getopt function
 using namespace std;
 
 
@@ -11,25 +11,31 @@ int main(int argc, char *argv[])
 {
     int opt;
     bool cflagused=false;
+    int gotc = 0; //number of times optional parameter used
     char optstring[] = "c";
 
     //Each step of this loop handles one optstring[] = "c";
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
     {
+        cout << optind << endl;
+
         switch(opt)
         {
+            //1 case for each optional parameter.
             case 'c':
                 //run any option-specific code here.
                 cout << "flag" << endl;
 
-                //Set boolean flag to true to check later.
+                //used to dectect if option was chosen.
                 cflagused = true;
+                //incrments counter
+                gotc++;
                 break;
         }
     }
     //when the code reaches here, the -c option will
     // no longer be in the argc, argv list.
-    for (int i = 0; i < argc; i++) cout << argv[i] << endl;
+    for (int i = 1; i < argc; i++) cout << argv[i] << endl;
     cout << endl;
 
     return 0;
