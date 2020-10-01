@@ -35,6 +35,25 @@ int main(int argc, char *argv[])
     return 0;
 }
 
+/*
+Samples"
+input:
+./a.out he voej -c fe "f ei fw" -c fe
+
+output:
+flag
+flag
+./a.out
+-c
+-c
+he
+voej
+fe
+f ei fw
+fe
+
+*/
+
 
 
 
