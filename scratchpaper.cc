@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
     //Each step of this loop handles one optstring[] = "c";
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
     {
-        cout << optind << "   ";
         cout << argv[optind] << endl;
 
         switch(opt)
@@ -25,7 +24,9 @@ int main(int argc, char *argv[])
             //1 case for each optional parameter.
             case 'c':
                 //run any option-specific code here.
-                cout << "flag" << endl;
+
+                //prints argument after optional parameter.
+                cout << argv[optind] << endl;
 
                 //used to dectect if option was chosen.
                 cflagused = true;
