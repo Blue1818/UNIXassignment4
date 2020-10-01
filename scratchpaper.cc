@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
     {
         cout << optind << "   ";
-        cout << argv[optind] << endl
+        cout << argv[optind] << endl;
 
         switch(opt)
         {
