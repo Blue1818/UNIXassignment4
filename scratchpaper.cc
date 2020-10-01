@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     }
     //when the code reaches here, the -c option will
     // no longer be in the argc, argv list.
-    for (i = 0; i < argc; i++) cout << argv[i] << endl;
+    for (int i = 0; i < argc; i++) cout << argv[i] << endl;
     cout << endl;
 
     return 0;
