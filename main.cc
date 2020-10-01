@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
 
 
-	/*
+	
 	cout << endl;
     //starts at the first nonparameter argument.
 	for (int i = optind; i < argc; i++)
@@ -128,5 +128,4 @@ int main(int argc, char *argv[])
 		}
 	}
 	return 0;
-    */
 }
