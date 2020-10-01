@@ -11,8 +11,10 @@ int main(int argc, char *argv[])
 {
     int opt;
     bool cflagused=false;
-    int gotc = 0; //number of times optional parameter used
-    char optstring[] = "c";
+    int gotc = 0; //number of times optional parameter used.
+    char optstring[] = "abcd:"; //d: means that d needs an argument.
+    bool gotd = false;
+    int gotparam = 0;
 
     //Each step of this loop handles one optstring[] = "c";
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
@@ -23,16 +25,21 @@ int main(int argc, char *argv[])
             case 'c':
                 //run any option-specific code here.
 
-                //prints argument after optional parameter.
-                cout << argv[optind] << endl;
-
                 //used to dectect if option was chosen.
                 cflagused = true;
                 //incrments counter
                 gotc++;
                 break;
+            case 'd':
+                //optarg is the argument right after -d
+                gotparam = *optarg;
+                gotd = true;
         }
     }
+
+
+
+
     //when the code reaches here, the -c option will
     // no longer be in the argc, argv list.
     for (int i = 1; i < argc; i++) cout << argv[i] << endl;

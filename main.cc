@@ -10,10 +10,11 @@
 int main(int argc, char *argv[])
 {
 	char buffer[256];
-	int fd;
-	ssize_t nr; //number of bytes;
+	int fd; //for opening files.
+	ssize_t nr; //number of bytes.
 	ssize_t nw;
-	int chunkSize = 10;
+	int chunkSize = 10; //size of buffer.
+    int numBytesRead = -1; //if -1 then no limit.
 	
 	//Check if there are no arguments from the commandline.
 	if (argc <= 1)
@@ -21,9 +22,24 @@ int main(int argc, char *argv[])
 		perror("no argument");
 		return 1;
 	}
+
+    flags and parameters
+
+    //run through argv with getopt
+    while ((opt = getopt(argc, argv, optstring)) != (-1))
+    {
+        flag 
+        switch(opt)
+    }
+
+
+
+
+
 	
 	cout << endl;
-	for (int i = 1; i < argc; i++)
+    //starts at the first nonparameter argument.
+	for (int i = optind; i < argc; i++)
 	{
 		
 		
