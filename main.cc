@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     int numR = 0;
     bool gotX = false;
     bool gotB = false;
+    int opt;
 
 
     //run through argv with getopt
