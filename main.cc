@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
             case 's':
                 gotS = true;
                 chunkSize = atoi(optarg);
+                cout << "chunkSize" << endl;
                 break;
             case 'n':
                 gotN = true;
