@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
             case 's':
                 gotS = true;
                 chunkSize = atoi(optarg);
-                cout << "chunkSize" << endl;
+                cout << chunkSize << endl;
                 break;
             case 'n':
                 gotN = true;
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
 
 
-	
+	/*
 	cout << endl;
     //starts at the first nonparameter argument.
 	for (int i = optind; i < argc; i++)
@@ -128,4 +128,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	return 0;
+    */
 }
