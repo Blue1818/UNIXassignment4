@@ -3,23 +3,6 @@
 	Assignment #3
 	9/18/20
 */
-#include <iostream>
-#include <stdio.h>      
-#include <stdlib.h>     
-//#include <iomanip>
-//#include <time.h> 
-//#include <cstdlib>
-//#include <ctime>
-//#include <string>
-//#include <string.h>
-//#include <cstdlib>
-//#include <ctime>
-//#include <vector>
-//#include <queue>
-//#include <fstream>
-#include <sys/type.h>
-#include <sys/types.h>
-#include <fcntl.h>
 #include "dog.cc"
 using namespace std;
 
@@ -42,7 +25,6 @@ int main(int argc, char *argv[])
 	
 	cout << "This goes to stdout: got " << s << endl;
 	cerr << "This goes to stderr: got " << s << endl;
-	
 
 	
 	
