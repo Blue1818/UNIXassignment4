@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     int gotc = 0; //number of times optional parameter used.
     char optstring[] = "abcd:"; //d: means that d needs an argument.
     bool gotd = false;
-    char gotparam* = nullptr;
+    char* gotparam = nullptr;
 
     //Each step of this loop handles one optstring[] = "c";
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
