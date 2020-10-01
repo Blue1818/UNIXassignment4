@@ -13,9 +13,8 @@ int main(int argc, char *argv[])
 	int fd; //for opening files.
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
-	int chunkSize = 10; //size of buffer.
-    int numBytesRead = -1; //if -1 then no limit.
 	
+
 	//Check if there are no arguments from the commandline.
 	if (argc <= 1)
 	{
@@ -23,13 +22,50 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-    flags and parameters
+    //flags and parameters
+    char optstring[] = "s:n:c:r:xb";
+    bool gotS = false;
+    int chunkSize = 10; //size of buffer.
+    bool gotN = false;
+    int numRead = -1; //if -1 then no limit.
+    bool gotC = false;
+    int numC = 0;
+    bool gotR = false;
+    int numR = 0;
+    bool gotX = false;
+    bool gotB = false;
+
 
     //run through argv with getopt
     while ((opt = getopt(argc, argv, optstring)) != (-1))
     {
-        flag 
         switch(opt)
+        {
+            case 's':
+                gotS = true;
+                chunkSize = atoi(optarg);
+                break;
+            case 'n':
+                gotN = true;
+                numRead = atoi(optarg);
+                break;
+            case 'c':
+                gotC = true;            
+                numC = atoi(optarg);
+                break;
+            case 'r':
+                gotR = true;
+                numR = atoi(optarg);
+                break;
+            case 'x':
+                gotX = true;
+
+                break;
+            case 'b':
+                gotB = true;
+
+                break;
+        }
     }
 
 
