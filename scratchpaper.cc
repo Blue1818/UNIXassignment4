@@ -17,8 +17,6 @@ int main(int argc, char *argv[])
     //Each step of this loop handles one optstring[] = "c";
     while ((opt = getopt(argc, argv, optstring)) != (-1)) // end when -1 is returned.
     {
-        cout << argv[optind] << endl;
-
         switch(opt)
         {
             //1 case for each optional parameter.
