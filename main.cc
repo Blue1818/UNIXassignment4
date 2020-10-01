@@ -20,6 +20,7 @@
 #include <sys/type.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include "dog.cc"
 using namespace std;
 
 
