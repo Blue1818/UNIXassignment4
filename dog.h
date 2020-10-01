@@ -2,7 +2,7 @@
 #define H_DOG
 
 #include <iostream>
-#include <sys/type.h>
+//#include <sys/type.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
