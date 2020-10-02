@@ -15,7 +15,7 @@
 
 // • The ability to specify a command line option (­c x) to have the program apply a Caesar cipher with a
 // shift of x to alphabetical characters in the data read before writing its results.
-void caesarCipher(char buffer[], int numSize, int shift)
+void cipher(char buffer[], int numSize, int shift)
 {
     //isalpha(char) returns 0 if char is a alphabetic letter.
     for (int i = 0; i < numSize; i++)

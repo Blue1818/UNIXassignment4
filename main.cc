@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
 				//if -c call caeserCipher fuction
 				if (gotC == true)
 				{
-					ceasarCipher(buffer, chunkSize, numC);
+					cipher(buffer, chunkSize, numC);
 				}
 
 				

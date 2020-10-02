@@ -15,8 +15,8 @@
 using namespace std;
 
 
-//encripts the buffer using the Ceasar cipher.
-void caesarCipher(char [], int, int);
+//encripts the buffer using the Caesar cipher.
+void cipher(char [], int, int);
 
 
 
