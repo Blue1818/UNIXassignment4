@@ -1,7 +1,7 @@
 /*	Dale Westberg z1910234
 	CSCI 330
 	Assignment #3
-	9/18/20
+	10/2/20
 */
 #include "dog.cc"
 

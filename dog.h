@@ -1,3 +1,8 @@
+/*	Dale Westberg z1910234
+	CSCI 330
+	Assignment #3
+	10/2/20
+*/
 #ifndef H_DOG
 #define H_DOG
 
@@ -9,6 +14,9 @@
 #include <unistd.h>
 using namespace std;
 
+
+//encripts the buffer using the Ceasar cipher.
+void caesarCipher(char &[], int);
 
 
 
