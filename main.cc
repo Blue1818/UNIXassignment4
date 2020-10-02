@@ -49,7 +49,6 @@ int main(int argc, char *argv[])
             case 'n':
                 //gotN = true;
                 numRead = atoi(optarg);
-cout << numRead;
                 break;
             case 'c':
 				if (gotR == true)
