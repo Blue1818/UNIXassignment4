@@ -21,6 +21,8 @@ void cipher(char [], int, int);
 //incrment each byte.
 void rotate(char [], int, int);
 
+//change buffer hex and returns chunkSize * 2
+int toHex(char [], int);
 
 
 #endif

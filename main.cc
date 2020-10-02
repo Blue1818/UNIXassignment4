@@ -14,6 +14,9 @@ int main(int argc, char *argv[])
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
 
+	toHex(buffer, 2);
+	return 404;
+
 	//Check if there are no arguments from the commandline.
 	if (argc <= 1)
 	{
@@ -155,6 +158,11 @@ int main(int argc, char *argv[])
 				if (gotR == true)
 				{
 					rotate(buffer, chunkSize, numR);
+				}
+				//if -x call to hex and assign it to nr
+				if (gotX == true)
+				{
+					nr = toHex(buffer, chunkSize);
 				}
 				
 				//Write the data to standard output.
