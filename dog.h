@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 using namespace std;
+#define BUFFER_SIZE 256
 
 
 //encripts the buffer using the Caesar cipher.

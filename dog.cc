@@ -53,8 +53,8 @@ void rotate(char buffer[], int numSize, int shift)
 // • The ability to specify a command line option (­x) to output the data in the file as hexadecimal.
 int toHex(char buffer[], int numSize)
 {
-    char newbuffer[] = buffer;
-     
+    char newbuffer[(BUFFER_SIZE * 2)] = buffer;
+
 
 
     return numSize * 2;

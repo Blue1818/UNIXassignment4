@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	char buffer[256];
+	char buffer[BUFFER_SIZE];
 	int fd; //for opening files.
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
