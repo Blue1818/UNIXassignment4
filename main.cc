@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     int chunkSize = 10; //size of buffer.
     bool gotN = false;
     int numRead = -1; //if -1 then no limit.
+    int numCount = 0;
     bool gotC = false;
     int numC = 0;
     bool gotR = false;
@@ -45,7 +46,6 @@ int main(int argc, char *argv[])
             case 's':
                 gotS = true;
                 chunkSize = atoi(optarg);
-                cout << chunkSize << endl;
                 break;
             case 'n':
                 gotN = true;
@@ -101,10 +101,12 @@ int main(int argc, char *argv[])
 			
 			//Say the file name and number.
 			cout << "File number " << i << " " << argv[i] << ":" << endl << endl;
-			do //Til the number of bytes is 0.
+
+			do //while the number of bytes is not 0 and numCount < numRead 
 			{
 				//Read 10 (chunkSize) bytes.
 				nr = read(fd, buffer, chunkSize);
+                numCount += nr;
 				//Check if error.
 				if (nr == (-1))
 				{
@@ -121,7 +123,9 @@ int main(int argc, char *argv[])
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);
-			} while (nr != 0);
+			} while ((nr != 0) && ((numCount < numRead) || (gotN == false))); 
+            //while the number of bytes is not 0 and numCount < numRead
+
 			cout << endl << endl;
 			
 			close(fd);
