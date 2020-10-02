@@ -124,7 +124,7 @@ cout << numRead;
 			
 			//Say the file name and number.
 			cout << "File number " << i << " " << argv[i] << ":" << endl << endl;
-
+			numCount = 0;
 			do //while the number of bytes is not 0 and numCount < numRead 
 			{
 				//Read 10 (chunkSize) bytes.
