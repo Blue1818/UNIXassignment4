@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
             case 'c':
 				if (gotR == true)
 				{
-					perror("both r and c")
+					perror("both r and c");
 					cout << "error";
 					return 4;
 				}
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
             case 'r':
 				if (gotC == true)
 				{
-					perror("both r and c")
+					perror("both r and c");
 					cout << "error";
 					return 4;
 				}
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
             case 'x':
 				if (gotB == true)
 				{
-					perror("both x and b")
+					perror("both x and b");
 					cout << "error";
 					return 4;
 				}
@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
             case 'b':
 				if (gotX == true)
 				{
-					perror("both x and b")
+					perror("both x and b");
 					cout << "error";
 					return 4;
 				}
