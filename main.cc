@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
 
-	cout << buffer[0] << endl;
+	/* cout << buffer[0] << endl;
 	buffer[0] = 'a';
 	buffer[1] = 'b';
 	cout << int(buffer[0]) << endl;
 	toHex(buffer, 2);
 	cout << buffer[0] << buffer[1] << endl << endl;
-	return 404;
+	return 404; */
 
 	//Check if there are no arguments from the commandline.
 	if (argc <= 1)
