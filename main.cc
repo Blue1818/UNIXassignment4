@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 	ssize_t nw;
 	
 	buffer[0] = 'j';
-	caesarCipher(*buffer, 1, 0);
+	caesarCipher(buffer, 1, 0);
+	cout << buffer[0] << buffer [1] << endl;
 	return 404;
 
 	//Check if there are no arguments from the commandline.
