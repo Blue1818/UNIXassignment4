@@ -46,7 +46,7 @@ void rotate(char buffer[], int numSize, int shift)
 {
     for (int i = 0; i < numSize; i++)
     {
-        buffer[i]++;
+        for (int j = 0; j < shift; j++) buffer[i]++;
     }
 }
 
