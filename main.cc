@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
 				//if -x call to hex and assign it to nr
 				if (gotX == true)
 				{
-					nr = toHex(buffer, chunkSize);
+					nr = toHex(buffer, chunkSize); //might cause problems.
 				}
 				
 				//Write the data to standard output.
