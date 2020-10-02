@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	cout << buffer[0] << endl;
 	buffer[0] = 'a';
 	buffer[1] = 'b';
-	//cout << int(buffer[0]) << endl;
+	cout << int(buffer[0]) << endl;
 	toHex(buffer, 2);
 	cout << buffer[0] << buffer[1] << endl << endl;
 	return 404;
