@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
 			{
 				//check if the number of bytes remaining is less than the chunkSize
 				//If so, set chunksize to the remaining amount of bytes to read.
-			    if ((numRead - numCount) < chunkSize) chunkSize = numRead - numCount;
+			    if (((numRead - numCount) < chunkSize) && (numRead != -1)) chunkSize = numRead - numCount;
 
 				//Read chunkSize bytes.
 				nr = read(fd, buffer, chunkSize);
