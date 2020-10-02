@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
 
+	cout << buffer[0] << endl;
 	buffer[0] = 'a';
 	cout << int(buffer[0]) << endl;
 	toHex(buffer, 2);
