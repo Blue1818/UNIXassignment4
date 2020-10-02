@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     char optstring[] = "s:n:c:r:xb";
     bool gotS = false;
     int chunkSize = 10; //size of buffer.
-    bool gotN = false;
+    //bool gotN = false;
     int numRead = -1; //if -1 then no limit.
     int numCount = 0;
     bool gotC = false;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
                 chunkSize = atoi(optarg);
                 break;
             case 'n':
-                gotN = true;
+                //gotN = true;
                 numRead = atoi(optarg);
                 break;
             case 'c':
@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);
-			} while ((nr != 0) && ((numCount < numRead) || (gotN == false))); 
+			} while ((nr != 0) && ((numCount < numRead) || (numRead != -1))); 
             //while the number of bytes is not 0 and numCount < numRead
 
 			cout << endl << endl;
