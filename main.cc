@@ -13,11 +13,6 @@ int main(int argc, char *argv[])
 	int fd; //for opening files.
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
-	
-	buffer[0] = 'j';
-	caesarCipher(buffer, 1, 0);
-	cout << buffer[0] << buffer [1] << endl;
-	return 404;
 
 	//Check if there are no arguments from the commandline.
 	if (argc <= 1)
@@ -151,6 +146,7 @@ cout << numRead;
 				//For timing issues.
 				cout.flush();
 				
+				//if -c
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);
