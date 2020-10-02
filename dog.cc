@@ -66,10 +66,11 @@ int toHex(char buffer[], int numSize)
         first = val / 16;
         //The remainder is the index for the second hex bit.
         second = val - first;
+        cout << second << endl;
         //use the hex char array with first and second.
         //to input the hex characters into the newbuffer.
-        newbuffer[i*2] = hex[first];
-        newbuffer[(i*2) + 1] = hex[second];
+        newbuffer[i * 2] = hex[first];
+        newbuffer[(i * 2) + 1] = hex[second];
     }
 
     //load newbuffer into buffer with a for loop.
