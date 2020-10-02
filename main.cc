@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	buffer[0] = 'a';
 	cout << int(buffer[0]) << endl;
 	toHex(buffer, 2);
-	cout << buffer << endl << endl;
+	cout << buffer[0] << buffer[1] << endl << endl;
 	return 404;
 
 	//Check if there are no arguments from the commandline.
