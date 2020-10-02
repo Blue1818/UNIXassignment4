@@ -135,11 +135,9 @@ int main(int argc, char *argv[])
 				//Check if error.
 				if (nr == (-1))
 				{
-					cout << "flag";
 					perror("read");
 					return 3;
 				}
-				cout << "flag2";
 				
 				//Puts a null character at the end of the file.
 				//Gets rid of extra lines when printed.
