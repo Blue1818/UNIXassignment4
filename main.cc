@@ -146,7 +146,7 @@ cout << numRead;
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);
-			} while ((nr != 0) && ((numCount < numRead) || (numRead != -1))); 
+			} while ((nr != 0) && ((numCount < numRead) || (numRead == -1))); 
             //while the number of bytes is not 0 and numCount < numRead
 
 			cout << endl << endl;
