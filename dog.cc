@@ -69,11 +69,11 @@ int toHex(char buffer[], int numSize)
         //use the hex char array with first and second.
         //to input the hex characters into the newbuffer.
         newbuffer[i*2] = hex[first];
-        newbuffer[(i*2) + 1] = hex[second]
+        newbuffer[(i*2) + 1] = hex[second];
     }
 
     //load newbuffer into buffer with a for loop.
-    for (size_t int i = 0; i < BUFFER_SIZE; i++)
+    for (size_t i = 0; i < BUFFER_SIZE; i++)
     {
         buffer[i] = newbuffer[i];
     }
