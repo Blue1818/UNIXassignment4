@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     //flags and parameters
     char optstring[] = "s:n:c:r:xb";
-    bool gotS = false;
+    //bool gotS = false;
     int chunkSize = 10; //size of buffer.
     //bool gotN = false;
     int numRead = -1; //if -1 then no limit.
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         switch(opt)
         {
             case 's':
-                gotS = true;
+                //gotS = true;
                 chunkSize = atoi(optarg);
                 break;
             case 'n':
@@ -52,20 +52,42 @@ int main(int argc, char *argv[])
                 numRead = atoi(optarg);
                 break;
             case 'c':
+				if (gotR == true)
+				{
+					perror("both r and c")
+					cout << "error";
+					return 4;
+				}
                 gotC = true;            
                 numC = atoi(optarg);
                 break;
             case 'r':
+				if (gotC == true)
+				{
+					perror("both r and c")
+					cout << "error";
+					return 4;
+				}
                 gotR = true;
                 numR = atoi(optarg);
                 break;
             case 'x':
+				if (gotB == true)
+				{
+					perror("both x and b")
+					cout << "error";
+					return 4;
+				}
                 gotX = true;
-
                 break;
             case 'b':
+				if (gotX == true)
+				{
+					perror("both x and b")
+					cout << "error";
+					return 4;
+				}
                 gotB = true;
-
                 break;
         }
     }
