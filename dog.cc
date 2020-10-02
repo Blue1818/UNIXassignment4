@@ -73,7 +73,7 @@ int toHex(char buffer[], int numSize)
     }
 
     //load newbuffer into buffer with a for loop.
-    for (size_t i = 0; i < BUFFER_SIZE; i++)
+    for (int i = 0; i < (numSize * 2); i++)
     {
         buffer[i] = newbuffer[i];
     }
