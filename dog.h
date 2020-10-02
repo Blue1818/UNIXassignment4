@@ -18,6 +18,8 @@ using namespace std;
 //encripts the buffer using the Caesar cipher.
 void cipher(char [], int, int);
 
+//incrment each byte.
+void rotate(char [], int, int);
 
 
 

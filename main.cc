@@ -146,12 +146,16 @@ int main(int argc, char *argv[])
 				cout.flush();
 				
 				//put flag stuff here
-				//if -c call caeserCipher fuction
+				//if -c call Caesar cipher fuction
 				if (gotC == true)
 				{
 					cipher(buffer, chunkSize, numC);
 				}
-
+				//if -r call rotate function
+				if (gotR == true)
+				{
+					rotate(buffer, chunkSize, numR);
+				}
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);

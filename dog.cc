@@ -42,7 +42,13 @@ void cipher(char buffer[], int numSize, int shift)
 
 // • The ability to specify a command line option (­r x) to have the program apply a rotation of x to each
 // byte read from the file before sending the data to be output.
-
+void rotate(char buffer[], int numSize, int shift)
+{
+    for (int i = 0; i < numSize; i++)
+    {
+        buffer[i]++;
+    }
+}
 
 // • The ability to specify a command line option (­x) to output the data in the file as hexadecimal.
 
