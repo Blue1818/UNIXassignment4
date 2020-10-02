@@ -27,10 +27,10 @@ void cipher(char buffer[], int numSize, int shift)
             {
                 if (buffer[i] == 'z')
                 {
-                    buffer[i] == 'a';
+                    buffer[i] = 'a';
                 } else if (buffer[i] == 'Z')
                 {
-                    buffer[i] == 'A';
+                    buffer[i] = 'A';
                 } else
                 {
                     buffer[i]++;
