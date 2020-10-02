@@ -146,7 +146,13 @@ cout << numRead;
 				//For timing issues.
 				cout.flush();
 				
-				//if -c
+				//put flag stuff here
+				//if -c call caeserCipher fuction
+				if (gotC == true)
+				{
+					ceasarCipher(buffer, chunkSize, numC);
+				}
+
 				
 				//Write the data to standard output.
 				nw = write(1, buffer, nr);
