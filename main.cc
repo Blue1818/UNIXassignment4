@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	char buffer[BUFFER_SIZE];
+	for (size_t i = 0; i < BUFFER_SIZE; i++) buffer[i] = '0';
 	int fd; //for opening files.
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 	buffer[0] = 'a';
 	cout << int(buffer[0]) << endl;
 	toHex(buffer, 2);
-	cout << buffer << endl << endl;
+	cout << buffer[0] << endl << endl;
 	return 404;
 
 	//Check if there are no arguments from the commandline.
