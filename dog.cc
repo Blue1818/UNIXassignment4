@@ -56,10 +56,26 @@ int toHex(char buffer[], int numSize)
     char newbuffer[BUFFER_SIZE];
     char hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     int val = 0; //ASCII value of the character.
+    int first = 0;
+    int second = 0;
     
     for(int i = 0; i < numSize; i++)
     {
         val = buffer[i];
+        //Find the index for first hex bit.
+        first = val / 16;
+        //The remainder is the index for the second hex bit.
+        second = val - first;
+        //use the hex char array with first and second.
+        //to input the hex characters into the newbuffer.
+        newbuffer[i*2] = hex[first];
+        newbuffer[(i*2) + 1] = hex[second]
+    }
+
+    //load newbuffer into buffer with a for loop.
+    for (size_t int i = 0; i < BUFFER_SIZE; i++)
+    {
+        buffer[i] = newbuffer[i];
     }
 
 
