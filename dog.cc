@@ -61,7 +61,7 @@ int toHex(char buffer[], int numSize)
     
     for(int i = 0; i < numSize; i++)
     {
-        val = buffer[i];
+        val = int(buffer[i]);
         //Find the index for first hex bit.
         first = val / 16;
         //The remainder is the index for the second hex bit.
