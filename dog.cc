@@ -17,6 +17,7 @@
 // shift of x to alphabetical characters in the data read before writing its results.
 void caesarCipher(char *buffer[], int shift, int numSize)
 {
+    buffer[1] = 'a';
     //isalpha(char) returns 0 if char is a alphabetic letter.
     cout << "flag";
 }

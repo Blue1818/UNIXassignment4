@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	ssize_t nr; //number of bytes.
 	ssize_t nw;
 	
+	buffer[0] = 'j';
 	caesarCipher(buffer, 1, 0);
 	return 404;
 
